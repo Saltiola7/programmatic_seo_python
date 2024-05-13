@@ -1,0 +1,88 @@
+Field,Value,Description,
+Law Id,Type: integer,A unique identifier for this specific incentive/law/regulation.,
+State,Type: string,The two letter abbreviation of the state in which the incentive/law/regulation was enacted and is active. The code 'US' represents federal laws and the code 'DC' is Washington D.C.,
+Title,Type: string,The brief title assigned to the incentive/law/regulation description.,
+Text,Type: string,"Description of the incentive/law/regulation, including applicable legislative references.",
+Enacted Date,Type: datetime,The date the enacting legislation (if applicable) was signed into law.,
+Amended Date,Type: datetime,The date the incentive/law/regulation was updated through new legislation or rulemaking.,
+Is Recent,Type: boolean,The true or false value used to distinguish between recent federal executive actions (TRUE) and active incentives/laws/regulations (FALSE).,
+Sequence Number,Type: integer,The numerical value assigned to a description to show the order in which it is displayed online within a jurisdiction (state).,
+Type,Type: string,"The category that the incentive/law/regulation falls under, described below:",
+,,,
+,,State Incentives,
+,,Laws and Regulations,
+,,Utility/Private Incentives,
+,,,
+Agency,Type: string,The agency with primary responsibility for federal incentives/regulations.,
+Significant Update Date,Type: datetime,The date the last significant update to the law was made.,
+Expired Date,Type: datetime,The date the incentive/law/regulation is set to end.,
+Archived Date,Type: datetime,The date that an incentive/law/regulation is no longer relevant to the database. This may include longstanding Executive Orders or laws requiring legislative studies that have been completed.,
+Repealed Date,Type: datetime,The date legislation is enacted or a rulemaking is finalized to repeal the incentive/law/regulation.,
+Topic,Type: array,"For local incentive/regulation descriptions, the category that the incentive/regulation falls under, described below:",
+,,,
+,,Infrastructure Requirements,
+,,Vehicle Purchase and Infrastructure Development Incentives,
+,,Fuel Use Incentives,
+,,Parking Incentives,
+,,Technical Assistance,
+,,Vehicle Acquisition Requirements,
+,,Promotion Initiatives,
+,,Idle Reduction Requirements,
+,,Renewable Fuels Mandates and Standards,
+,,,
+Technology Categories,Type: string,"The fuel, vehicle, or other major technology type the incentive/regulation relates to, given as a code value descibed below:",
+,,,
+,,Value,Description
+,,AFTMKTCONV,Aftermarket Conversions
+,,AUTONOMOUS,Connected and Autonomous Vehicles
+,,BIOD,Biodiesel
+,,EFFEC,Fuel Economy / Efficiency
+,,ELEC,All-Electric Vehicles
+,,ETH,Ethanol / Flexible Fuel Vehicles
+,,HEV,Hybrid Electric Vehicles
+,,HY,Hydrogen / Fuel Cell Electric Vehicles
+,,IR,Idle Reduction
+,,LPG,Liquefied Petroleum Gas (Propane) / Propane Vehicles
+,,NEVS,Neighborhood Electric Vehicles
+,,NG,Natural Gas / Natural Gas Vehicles
+,,OTHER,Other
+,,PHEV,Plug-In Hybrid Electric Vehicles
+Incentive Categories,Type: string,"The type of incentive, given as a code value described below:",
+,,,
+,,Value,Description
+,,EXEM,Exemptions
+,,GNT,Grants
+,,LOANS,Loans and Leases
+,,OTHER,Other
+,,RBATE,Rebates
+,,TAX,Tax Incentives
+,,TOU,Time-of-Use Rate
+Regulation Categories,Type: string,"The type of regulation, given as a code value described below:",
+,,,
+,,Value,Description
+,,AIRQEMISSIONS,Air Quality / Emissions
+,,BUILD,Building Codes
+,,CCEINIT,Climate Change / Energy Initiatives
+,,DREST,Driving / Idling
+,,FUEL,Fuel Taxes
+,,OTHER,Other
+,,REGIS,Registration / Licensing
+,,REQ,Acquisition / Fuel Use
+,,RFS,Renewable Fuel Standard / Mandate
+,,RTC,Right-to-Charge
+,,STD,Fuel Production / Quality
+,,UTILITY,Utility Definition
+User Categories,Type: string,"The type of user subject to the law/regulation or able to claim the incentive, given as a code value described below:",
+,,,
+,,Value,Description
+,,AFP,Alternative Fuel Producer
+,,FLEET,Commercial
+,,GOV,Government Entity
+,,IND,Personal Vehicle Owner or Driver
+,,MAN,Alternative Fuel Vehicle (AFV) Manufacturer or Retrofitter
+,,MUD,Multi-Unit Dwelling
+,,OTHER,Other
+,,PURCH,Alternative Fuel Purchaser
+,,STATION,Alternative Fuel Infrastructure Operator
+,,TRANS,Transit
+References,Type: string,The URL associated with any bill or legislative reference included in the description.,

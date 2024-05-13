@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"server": "zzd2xg9oti.europe-west4.gcp.clickhouse.cloud",
+				"port": 8443,
+				"useHTTPS": true,
+				"database": "default",
+				"username": "default",
+				"enableTls": false,
+				"previewLimit": 50,
+				"password": "~H3YDQCVnwaa4",
+				"driver": "ClickHouse",
+				"name": "clickhouse"
+			}
+		]
+	}
+}

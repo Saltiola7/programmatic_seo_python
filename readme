@@ -1,0 +1,65 @@
+# 24Rent pSEO Documentation <!-- WRITE -->
+## Solutions
+### Wordpress
+#### WP All Import
+#### Multi Page Generator
+#### ACF <!-- RESEARCH -->
+### Databases
+WP All Import and Multi Page Generator use Google Sheet or CSV as database. ACF can be used together with any database, in this example we use Clickhouse. Clickhouse can also be used to generate the Google Sheet or CSV accordingly.
+### Python Workflow
+#### [main.py](main.py)
+
+This Python script automates the process of generating keyword combinations from templates and city names, and populates a database with these combinations for further use:
+
+1. Fetch Data from ClickHouse: It retrieves data from a ClickHouse database using two specific queries: Retrieves programmatic_structure from the default.lvi_programmatic_structures table. Retrieves city names from the default.fi_cities table.
+2. Generate Combinations: For each programmatic_structure retrieved, it generates combinations by replacing placeholders in the structure with each city name fetched. This is done using regular expressions to find placeholders in the structure string and replacing them with city names.
+3. Insert Combinations into ClickHouse: After generating all possible combinations of structures and city names, these combinations are formatted as SQL insert values and batch-inserted back into a ClickHouse table named lvi_programmatic_keywords.
+4. Configuration and Authentication: The script uses a predefined configuration for the ClickHouse database connection, including URL, username, password, and headers necessary for making HTTP requests.
+5. Execution Flow: The script encapsulates the functionality in a main() function which orchestrates fetching data, generating combinations, and inserting them back into the database. This function is called when the script is executed as the main program.
+
+## Data
+### Sources
+#### Datasets
+I researched for car data and saved the datasets to [data](data) folder.
+#### APIs
+There are multiple paid APIs listed here for enriching or creating further campaigns here.
+## Strategy
+### Programmatic Structures
+#### Scalable Keywords
+
+##### Competition
+##### Brainstorming
+### Generated Content
+- Layout in Divi
+- Schema.org embed <!--TODO-->
+
+#### Landing Pages
+Competition landing pages in Figma <!-- TODO -->
+#### Posts
+
+### Research
+- extract competition search results
+- crawl competition websites
+
+<!--
+# TODO
+
+{{ placeholder }}
+data = ["lähiöt", "lomakausi", "maamerkit & nähtävyydet", "tapahtumat", "lisävarusteet", "talvivarusteet"]
+- Data
+  - automerkit & mallit
+  - kaupungit
+  - Datasets
+  - APIs
+    - TrafiCom
+- all the schema.org schemas that relate to this project
+- schema.org template tietokanta
+- WP Templatet
+#
+- landing pages with page builder
+- schema into google sheets?
+  - dynamic placeholder to the page?
+- head term
+  - best vegan restauraunt
+
+-->

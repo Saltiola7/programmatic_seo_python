@@ -1,0 +1,53 @@
+programmatic_structures:
+  - "Rent {car_brand} {car_model} in {city}"
+  - "Rent {car_brand} {car_model} for {holiday}"
+  - "Special weekend offer: Rent {car_brand} {car_model} in {city}"
+  - "Rent {car_brand} {car_model} for {holiday} with a {discount} discount"
+  - "Book a business trip in {city} with a {car_brand} {car_model}"
+  - "Experience luxury in {city}: Rent a {car_brand} {car_model}"
+  - "Family package in {city}: Rent a spacious {car_brand} {car_model}"
+  - "Group discount available: Rent {car_brand} {car_model} for your trip to {city}"
+  - "Go green in {city} with our eco-friendly {car_brand} {car_model}"
+  - "Rent an electric {car_brand} {car_model} and explore {city} sustainably"
+  - "Rent {car_brand} {car_model} for a snowy {holiday} in {city}"
+  - "Summer adventures in {city}: Rent a {car_brand} {car_model} for your vacation"
+  - "Enjoy {event} in {city} with a {car_brand} {car_model}"
+
+data_tables:
+  car_brand:
+    Toyota:
+      - Corolla
+      - Camry
+    Tesla:
+      - Model S
+      - Model X
+    Ford:
+      - Fiesta
+      - Focus
+  city:
+    - Helsinki
+    - Espoo
+    - Tampere
+  holiday:
+    - Christmas
+    - Easter
+  discount:
+    - "10%"
+    - "20%"
+  event:
+    - "music festival"
+    - "sports event"
+
+structures:
+  head_term:
+    - things to do
+  modifier:
+    - in helsinki
+    - in tampere
+    - in espoo
+  secondary_modifier:
+    - for couples
+    - for families
+    - for kids
+    - for adults
+

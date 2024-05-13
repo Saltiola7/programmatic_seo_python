@@ -1,0 +1,9 @@
+clickhouse:
+  url: "https://zzd2xg9oti.europe-west4.gcp.clickhouse.cloud:8443"
+  username: "default"
+  password: "~H3YDQCVnwaa4"
+  query: "SELECT 1"
+  headers:
+    Content-Type: "application/x-www-form-urlencoded"
+reoon_email_verifier:
+  api_key: "d79pRuIGoy2bttdwxRJbaagzAMghhgzA"
