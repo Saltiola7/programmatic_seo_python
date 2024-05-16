@@ -1,5 +1,10 @@
 import requests
 import re
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv('cfg/.env')
 
 def query_clickhouse(sql, url, headers, auth, method='POST'):
     response = requests.request(method, url, data=sql, headers=headers, auth=auth)
@@ -10,9 +15,9 @@ def query_clickhouse(sql, url, headers, auth, method='POST'):
 
 def fetch_data(query, table):
     clickhouse_config = {
-        "url": "https://zzd2xg9oti.europe-west4.gcp.clickhouse.cloud:8443",
-        "username": "default",
-        "password": "~H3YDQCVnwaa4",
+        "url": os.getenv("CLICKHOUSE_URL"),
+        "username": os.getenv("CLICKHOUSE_USERNAME"),
+        "password": os.getenv("CLICKHOUSE_PASSWORD"),
         "headers": {
             "Content-Type": "application/x-www-form-urlencoded"
         }
@@ -35,9 +40,9 @@ def generate_combinations(programmatic_structure, cities):
 
 def insert_into_clickhouse(sentences):
     clickhouse_config = {
-        "url": "https://zzd2xg9oti.europe-west4.gcp.clickhouse.cloud:8443",
-        "username": "default",
-        "password": "~H3YDQCVnwaa4",
+        "url": os.getenv("CLICKHOUSE_URL"),
+        "username": os.getenv("CLICKHOUSE_USERNAME"),
+        "password": os.getenv("CLICKHOUSE_PASSWORD"),
         "headers": {
             "Content-Type": "application/x-www-form-urlencoded"
         }
