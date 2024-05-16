@@ -1,6 +1,7 @@
+>This repo is a work in progress. 
 # pSEO Documentation
-### Python Workflow
-#### [main.py](main.py)
+This repo is a collection of scripts that help in creating a programmatic and automatic SEO campaign
+## [main.py](main.py)
 
 This Python script automates the process of generating keyword combinations from templates and city names, and populates a database with these combinations for further use:
 
